@@ -13,7 +13,7 @@ rocketIfNeeded = []
 #endif
 
 let package = Package(
-    name: "Moya",
+    name: "Moya-NoRXSwift",
     platforms: [
         .macOS(.v10_12),
         .iOS(.v10),
@@ -23,8 +23,6 @@ let package = Package(
     products: [
         .library(name: "Moya", targets: ["Moya"]),
         .library(name: "CombineMoya", targets: ["CombineMoya"]),
-        .library(name: "ReactiveMoya", targets: ["ReactiveMoya"]),
-        .library(name: "RxMoya", targets: ["RxMoya"])
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
