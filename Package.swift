@@ -22,7 +22,7 @@ let package = Package(
     ],
     products: [
         .library(name: "Moya", targets: ["Moya"]),
-        .library(name: "CombineMoya", targets: ["CombineMoya"]),
+        // .library(name: "CombineMoya", targets: ["CombineMoya"]),
     ],
     dependencies: [
         .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.0.0")),
@@ -40,24 +40,24 @@ let package = Package(
                 "Supporting Files/Info.plist"
             ]
         ),
-        .target(
-            name: "CombineMoya",
-            dependencies: [
-                "Moya"
-            ]
-        ),
-        .testTarget( // dev
-            name: "MoyaTests",  // dev
-            dependencies: [ // dev
-                "Moya", // dev
-                "CombineMoya", // dev
-                "ReactiveMoya", // dev
-                "RxMoya", // dev
-                .product(name: "Quick", package: "Quick"), // dev
-                .product(name: "Nimble", package: "Nimble"), // dev
-                .product(name: "OHHTTPStubsSwift", package: "OHHTTPStubs") // dev
-            ] // dev
-        ) // dev
+        // .target(
+        //     name: "CombineMoya",
+        //     dependencies: [
+        //         "Moya"
+        //     ]
+        // ),
+        // .testTarget( // dev
+        //     name: "MoyaTests",  // dev
+        //     dependencies: [ // dev
+        //         "Moya", // dev
+        //         "CombineMoya", // dev
+        //         "ReactiveMoya", // dev
+        //         "RxMoya", // dev
+        //         .product(name: "Quick", package: "Quick"), // dev
+        //         .product(name: "Nimble", package: "Nimble"), // dev
+        //         .product(name: "OHHTTPStubsSwift", package: "OHHTTPStubs") // dev
+        //     ] // dev
+        // ) // dev
     ]
 )
 
